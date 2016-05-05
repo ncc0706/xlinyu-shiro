@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="springContextUtil" class="com.xlinyu.web.utils.SpringContextUtil"></bean>
+
+	<bean id="propertyConfigurer"
+		class="com.xlinyu.web.utils.CustomizedPropertyPlaceholderConfigurer">
+		<!--确保文件的编码跟当前编码一致 -->
+		<property name="fileEncoding" value="UTF-8"></property>
+		<property name="ignoreUnresolvablePlaceholders" value="true"></property>
+		<property name="locations">
+			<list>
+				<value>classpath:config/config.properties</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>
