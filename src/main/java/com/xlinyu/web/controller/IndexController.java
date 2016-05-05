@@ -1,4 +1,4 @@
-package com.xlinyu.controller;
+package com.xlinyu.web.controller;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
